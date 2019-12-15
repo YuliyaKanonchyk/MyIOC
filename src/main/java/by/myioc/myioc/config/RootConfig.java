@@ -8,9 +8,6 @@ import by.myioc.myioc.ioc.annotations.ComponentScan;
 import by.myioc.myioc.ioc.annotations.Configuration;
 import by.myioc.myioc.ioc.annotations.Qualifier;
 
-import java.util.ArrayList;
-import java.util.List;
-
 @Configuration
 @ComponentScan(basePackage = "by.myioc.myioc.entity")
 public class RootConfig {

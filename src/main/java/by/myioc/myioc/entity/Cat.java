@@ -10,9 +10,6 @@ import lombok.*;
 //@AllArgsConstructor
 //@NoArgsConstructor
 @Component
-//scan and create queue
-//init class and methods
-//inject value and setters
 public class Cat {
 
     @Value(value="TestCatName")

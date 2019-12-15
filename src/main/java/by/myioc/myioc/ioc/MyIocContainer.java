@@ -11,9 +11,6 @@ import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 
-// Стадия 1 - Чтение определений компонентов
-// Стадия 2 - Создание обьектов компонентов
-
 public class MyIocContainer implements MyIOC {
     private PriorityQueue<Method> queueMethods = new PriorityQueue<>(new MethodComparator());
     private PriorityQueue<Constructor> queueConstructor;
@@ -214,7 +211,6 @@ public class MyIocContainer implements MyIOC {
                     int count = 0;
                     for (Class<?> parameterType : parameterTypes) {
                         if (parameterType.equals(String.class)) {
-                            // TODO: 26.11.2019 If Value => name = valueName
                             if (parameterType.isAnnotationPresent(Value.class)) {
                                 obj[count++] = parameterType.getAnnotation(Value.class).value();
                             } else {
@@ -286,11 +282,4 @@ public class MyIocContainer implements MyIOC {
         }
     }
 
-    //xml cnfg
-    //java base
-    //Annotation config
-
-    //inject to field
-    //inject to constructor
-    //inject to setter
 }
