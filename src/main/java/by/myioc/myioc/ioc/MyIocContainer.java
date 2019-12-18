@@ -12,6 +12,8 @@ import java.util.concurrent.ConcurrentHashMap;
 
 
 public class MyIocContainer implements MyIOC {
+
+
     private PriorityQueue<Method> queueMethods = new PriorityQueue<>(new MethodComparator());
     private PriorityQueue<Constructor> queueConstructor;
     private Class configClass;
@@ -56,8 +58,7 @@ public class MyIocContainer implements MyIOC {
             if (aClass.getDeclaredConstructors().length == 1) {
                 if (aClass.getConstructors()[0].getParameterCount() == 0) {
 //                    queueConstructor.add(aClass.getConstructors()[0]);
-
-                    toArr.add(aClass.getConstructors()[0]);
+                        toArr.add(aClass.getConstructors()[0]);
 
                 } else {
                     Constructor bigConstructor = null;

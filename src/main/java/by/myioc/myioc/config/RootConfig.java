@@ -12,24 +12,24 @@ import by.myioc.myioc.ioc.annotations.Qualifier;
 @ComponentScan(basePackage = "by.myioc.myioc.entity")
 public class RootConfig {
 
-    @Component(name = "DiDiDi")
+    @Component(name = "111")
     public User user1(@Qualifier(name = "dog1") Dog dog1, Cat cat) {
-        return new User("User1", dog1, cat);
+        return new User("коля", dog1, cat);
     }
 
-    @Component(name = "JJJ")
+    @Component(name = "222")
     public User user2(@Qualifier(name = "dog2") Dog dog2, Cat cat) {
-        return new User("User2", dog2, cat);
+        return new User("паша", dog2, cat);
     }
 
     @Component(name = "Dog1")
     public Dog dog1() {
-        return new Dog("Dog1");
+        return new Dog("тузик");
     }
 
     @Component(name = "Dog2")
     public Dog dog2() {
-        return new Dog("Dog2");
+        return new Dog("шарик");
     }
 //
 //    @Component
